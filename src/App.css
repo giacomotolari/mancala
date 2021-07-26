@@ -1,38 +1,96 @@
+body {
+  background-color: black;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.board {
+  /* background-color: burlywood; */
+  background-image: url('./27wTQC.png');
+  /* border: 1px solid brown; */
+  border-radius: 5%;
+  width: 94%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 11px 0px 0px #e2bc8f;
+  -webkit-box-shadow: 1px 11px 0px 0px #e2bc8f;
+  -moz-box-shadow: 4px 11px 0px 0px #e2bc8f;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.containers {
+  /* border: 1px solid green; */
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.player1Containers,
+.player2Containers {
+  /* border: 1px solid white; */
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 0;
+}
+.container {
+  background-image: url('./woodtexture-29.jpg');
+  border-radius: 45%;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  cursor: grabbing;
+}
+.player2Points,
+.player1Points {
+  background-image: url('./woodtexture-29.jpg');
+  border-radius: 45%;
+  width: 14%;
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+.pebble {
+  background-color: blue;
+  box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  margin: 1%;
+}
+p {
+  margin-top: -8%;
+  font-size: 76px;
+  color: #ffc107;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  text-shadow: 0px 0px 0 rgb(250, 188, 2), 1px 1px 0 rgb(245, 183, 0),
+    2px 2px 0 rgb(240, 178, 0), 3px 3px 0 rgb(235, 173, 0),
+    4px 4px 0 rgb(230, 168, 0), 5px 5px 0 rgb(225, 163, 0),
+    6px 6px 0 rgb(220, 158, 0), 7px 7px 0 rgb(215, 153, 0),
+    8px 8px 0 rgb(210, 148, 0), 9px 9px 0 rgb(205, 143, 0),
+    10px 10px 0 rgb(200, 138, 0), 11px 11px 10px rgba(0, 0, 0, 1),
+    11px 11px 1px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
