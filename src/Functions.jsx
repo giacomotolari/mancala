@@ -2,44 +2,51 @@
 import React from 'react';
 
 
-export function movePebblesContainer1() {
-  return alert('you moved the pebbles of the container number:1');
+export function text1() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 1';
 }
-
-export function movePebblesContainer2() {
-  return alert('you moved the pebbles of the container number:2');
+export function text2() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 2';
 }
-
-export function movePebblesContainer3() {
-  return alert('you moved the pebbles of the container number:');
+export function text3() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 3';
 }
-
-export function movePebblesContainer4() {
-  return alert('you moved the pebbles of the container number:');
+export function text4() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 4';
 }
-export function movePebblesContainer5() {
-  return alert('you moved the pebbles of the container number:');
+export function text5() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 5';
 }
-export function movePebblesContainer6() {
-  return alert('you moved the pebbles of the container number:');
+export function text6() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 6';
 }
-export function movePebblesContainer7() {
-  return alert('you moved the pebbles of the container number:');
+export function text7() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 7';
 }
-export function movePebblesContainer8() {
-  return alert('you moved the pebbles of the container number:');
+export function text8() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 8';
 }
-
-export function movePebblesContainer9() {
-  return alert('you moved the pebbles of the container number:');
+export function text9() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 9';
 }
-export function movePebblesContainer10() {
-  return alert('you moved the pebbles of the container number:');
+export function text10() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 10';
 }
-export function movePebblesContainer11() {
-  return alert('you moved the pebbles of the container number:');
+export function text11() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 11';
 }
-
-export function movePebblesContainer12() {
-  return alert('you moved the pebbles of the container number:');
+export function text12() {
+  document.getElementById('text').innerHTML =
+    'you moved the pebbles of container 12';
 }
