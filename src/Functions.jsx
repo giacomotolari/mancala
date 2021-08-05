@@ -2,51 +2,55 @@
 import React from 'react';
 
 
-export function text1() {
+export function textMoveContainer1() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 1';
 }
-export function text2() {
+export function textMoveContainer2() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 2';
 }
-export function text3() {
+export function textMoveContainer3() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 3';
 }
-export function text4() {
+export function textMoveContainer4() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 4';
 }
-export function text5() {
+export function textMoveContainer5() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 5';
 }
-export function text6() {
+export function textMoveContainer6() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 6';
 }
-export function text7() {
+export function textMoveContainer7() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 7';
 }
-export function text8() {
+export function textMoveContainer8() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 8';
 }
-export function text9() {
+export function textMoveContainer9() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 9';
 }
-export function text10() {
+export function textMoveContainer10() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 10';
 }
-export function text11() {
+export function textMoveContainer11() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 11';
 }
-export function text12() {
+export function textMoveContainer12() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 12';
+}
+export function oneRoundMore() {
+  document.getElementById('Specialtext').innerHTML =
+    'Nice! You have gained another round!';
 }
