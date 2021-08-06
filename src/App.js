@@ -137,26 +137,47 @@ function App() {
       setCount12((prevCount) => prevCount + 1);
       setCountPoint2((prevCount) => prevCount + 1);
     }
-    if ((count1 === 1 || 15) && count2 === 0) {
+    if (count1 === 1 && count2 === 0) {
       setCountPoint1(countPointPlayer1 + count11);
       setCount11(0);
     }
-    if ((count1 === 2 || 16) && count3 === 0) {
+    if (count1 === 2 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10);
       setCount10(0);
     }
-    if ((count1 === 3 || 17) && count4 === 0) {
+    if (count1 === 3 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
       setCount9(0);
     }
-    if ((count1 === 4 || 18) && count5 === 0) {
+    if (count1 === 4 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
       setCount8(0);
     }
-    if ((count1 === 5 || 19) && count6 === 0) {
+    if (count1 === 5 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
       setCount7(0);
     }
+    if (count1 === 15 && count2 === 0) {
+      setCountPoint1(countPointPlayer1 + count11 + 1);
+      setCount11(0);
+    }
+    if (count1 === 16 && count3 === 0) {
+      setCountPoint1(countPointPlayer1 + count10 + 1);
+      setCount10(0);
+    }
+    if (count1 === 17 && count4 === 0) {
+      setCountPoint1(countPointPlayer1 + count9 + 1);
+      setCount9(0);
+    }
+    if (count1 === 18 && count5 === 0) {
+      setCountPoint1(countPointPlayer1 + count8 + 1);
+      setCount8(0);
+    }
+    if (count1 === 19 && count6 === 0) {
+      setCountPoint1(countPointPlayer1 + count7 + 1);
+      setCount7(0);
+    }
+
     setCount1(0);
   }
   function incrementCount2() {
@@ -277,20 +298,36 @@ function App() {
       setCountPoint2((prevCount) => prevCount + 1);
       setCount1((prevCount) => prevCount + 1);
     }
-    if ((count2 === 1 || 15) && count3 === 0) {
+    if (count2 === 1 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10);
       setCount10(0);
     }
-    if ((count2 === 2 || 16) && count4 === 0) {
+    if (count2 === 2 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
       setCount9(0);
     }
-    if ((count2 === 3 || 17) && count5 === 0) {
+    if (count2 === 3 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
       setCount8(0);
     }
-    if ((count2 === 4 || 18) && count6 === 0) {
+    if (count2 === 4 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
+      setCount7(0);
+    }
+    if (count2 === 15 && count3 === 0) {
+      setCountPoint1(countPointPlayer1 + count10 + 1);
+      setCount10(0);
+    }
+    if (count2 === 16 && count4 === 0) {
+      setCountPoint1(countPointPlayer1 + count9 + 1);
+      setCount9(0);
+    }
+    if (count2 === 17 && count5 === 0) {
+      setCountPoint1(countPointPlayer1 + count8 + 1);
+      setCount8(0);
+    }
+    if (count2 === 18 && count6 === 0) {
+      setCountPoint1(countPointPlayer1 + count7 + 1);
       setCount7(0);
     }
     setCount2(0);
@@ -413,16 +450,28 @@ function App() {
       setCount1((prevCount) => prevCount + 1);
       setCount2((prevCount) => prevCount + 1);
     }
-    if ((count3 === 1 || 15) && count4 === 0) {
+    if (count3 === 1 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
       setCount9(0);
     }
-    if ((count3 === 2 || 16) && count5 === 0) {
+    if (count3 === 2 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
       setCount8(0);
     }
-    if ((count3 === 3 || 17) && count6 === 0) {
+    if (count3 === 3 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
+      setCount7(0);
+    }
+    if (count3 === 15 && count4 === 0) {
+      setCountPoint1(countPointPlayer1 + count9 + 1);
+      setCount9(0);
+    }
+    if (count3 === 16 && count5 === 0) {
+      setCountPoint1(countPointPlayer1 + count8 + 1);
+      setCount8(0);
+    }
+    if (count3 === 17 && count6 === 0) {
+      setCountPoint1(countPointPlayer1 + count7 + 1);
       setCount7(0);
     }
     setCount3(0);
@@ -545,12 +594,20 @@ function App() {
       setCount2((prevCount) => prevCount + 1);
       setCount3((prevCount) => prevCount + 1);
     }
-    if ((count4 === 1 || 15) && count5 === 0) {
+    if (count4 === 1 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
       setCount8(0);
     }
-    if ((count4 === 2 || 16) && count6 === 0) {
+    if (count4 === 2 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
+      setCount7(0);
+    }
+    if (count4 === 15 && count5 === 0) {
+      setCountPoint1(countPointPlayer1 + count8 + 1);
+      setCount8(0);
+    }
+    if (count4 === 16 && count6 === 0) {
+      setCountPoint1(countPointPlayer1 + count7 + 1);
       setCount7(0);
     }
     setCount4(0);
@@ -674,8 +731,12 @@ function App() {
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
     }
-    if ((count5 === 1 || 15) && count6 === 0) {
+    if (count5 === 1 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
+      setCount7(0);
+    }
+    if (count5 === 15 && count6 === 0) {
+      setCountPoint1(countPointPlayer1 + count7 + 1);
       setCount7(0);
     }
     setCount5(0);
@@ -799,6 +860,30 @@ function App() {
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
     }
+    if (count6 === 9 && count1 === 0) {
+      setCountPoint1(countPointPlayer1 + count12 + 1);
+      setCount12(0);
+    }
+    if (count6 === 10 && count2 === 0) {
+      setCountPoint1(countPointPlayer1 + count11 + 1);
+      setCount11(0);
+    }
+    if (count6 === 11 && count3 === 0) {
+      setCountPoint1(countPointPlayer1 + count10 + 1);
+      setCount10(0);
+    }
+    if (count6 === 12 && count4 === 0) {
+      setCountPoint1(countPointPlayer1 + count9 + 1);
+      setCount9(0);
+    }
+    if (count6 === 13 && count5 === 0) {
+      setCountPoint1(countPointPlayer1 + count8 + 1);
+      setCount8(0);
+    }
+    if (count6 === 14 && count6 === 0) {
+      setCountPoint1(countPointPlayer1 + count7 + 1);
+      setCount7(0);
+    }
     setCount6(0);
   }
   function incrementCount7() {
@@ -920,24 +1005,44 @@ function App() {
       setCount6((prevCount) => prevCount + 1);
       setCountPoint1((prevCount) => prevCount + 1);
     }
-    if ((count7 === 1 || 15) && count8 === 0) {
+    if (count7 === 1 && count8 === 0) {
       setCountPoint2(countPointPlayer2 + count5);
       setCount5(0);
     }
-    if ((count7 === 2 || 16) && count9 === 0) {
+    if (count7 === 2 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4);
       setCount4(0);
     }
-    if ((count7 === 3 || 17) && count10 === 0) {
+    if (count7 === 3 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3);
       setCount3(0);
     }
-    if ((count7 === 4 || 18) && count11 === 0) {
+    if (count7 === 4 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
       setCount2(0);
     }
-    if ((count7 === 5 || 19) && count12 === 0) {
+    if (count7 === 5 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
+      setCount1(0);
+    }
+    if (count7 === 15 && count8 === 0) {
+      setCountPoint2(countPointPlayer2 + count5 + 1);
+      setCount5(0);
+    }
+    if (count7 === 16 && count9 === 0) {
+      setCountPoint2(countPointPlayer2 + count4 + 1);
+      setCount4(0);
+    }
+    if (count7 === 17 && count10 === 0) {
+      setCountPoint2(countPointPlayer2 + count3 + 1);
+      setCount3(0);
+    }
+    if (count7 === 18 && count11 === 0) {
+      setCountPoint2(countPointPlayer2 + count2 + 1);
+      setCount2(0);
+    }
+    if (count7 === 19 && count12 === 0) {
+      setCountPoint2(countPointPlayer2 + count1 + 1);
       setCount1(0);
     }
     setCount7(0);
@@ -1061,20 +1166,36 @@ function App() {
       setCountPoint1((prevCount) => prevCount + 1);
       setCount7((prevCount) => prevCount + 1);
     }
-    if ((count8 === 1 || 15) && count9 === 0) {
+    if (count8 === 1 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4);
       setCount4(0);
     }
-    if ((count8 === 2 || 16) && count10 === 0) {
+    if (count8 === 2 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3);
       setCount3(0);
     }
-    if ((count8 === 3 || 17) && count11 === 0) {
+    if (count8 === 3 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
       setCount2(0);
     }
-    if ((count8 === 4 || 18) && count12 === 0) {
+    if (count8 === 4 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
+      setCount1();
+    }
+    if (count8 === 15 && count9 === 0) {
+      setCountPoint2(countPointPlayer2 + count4 + 1);
+      setCount4(0);
+    }
+    if (count8 === 16 && count10 === 0) {
+      setCountPoint2(countPointPlayer2 + count3 + 1);
+      setCount3(0);
+    }
+    if (count8 === 17 && count11 === 0) {
+      setCountPoint2(countPointPlayer2 + count2 + 1);
+      setCount2(0);
+    }
+    if (count8 === 18 && count12 === 0) {
+      setCountPoint2(countPointPlayer2 + count1 + 1);
       setCount1(0);
     }
     setCount8(0);
@@ -1198,16 +1319,28 @@ function App() {
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
     }
-    if ((count9 === 1 || 15) && count10 === 0) {
+    if (count9 === 1 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3);
       setCount3(0);
     }
-    if ((count9 === 2 || 16) && count11 === 0) {
+    if (count9 === 2 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
       setCount2(0);
     }
-    if ((count9 === 3 || 17) && count12 === 0) {
+    if (count9 === 3 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
+      setCount1(0);
+    }
+    if (count9 === 15 && count10 === 0) {
+      setCountPoint2(countPointPlayer2 + count3 + 1);
+      setCount3(0);
+    }
+    if (count9 === 16 && count11 === 0) {
+      setCountPoint2(countPointPlayer2 + count2 + 1);
+      setCount2(0);
+    }
+    if (count9 === 17 && count12 === 0) {
+      setCountPoint2(countPointPlayer2 + count1 + 1);
       setCount1(0);
     }
     setCount9(0);
@@ -1331,12 +1464,20 @@ function App() {
       setCount8((prevCount) => prevCount + 1);
       setCount9((prevCount) => prevCount + 1);
     }
-    if ((count10 === 1 || 15) && count11 === 0) {
+    if (count10 === 1 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
       setCount2(0);
     }
-    if ((count10 === 2 || 16) && count12 === 0) {
+    if (count10 === 2 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
+      setCount1(0);
+    }
+    if (count10 === 15 && count11 === 0) {
+      setCountPoint2(countPointPlayer2 + count2 + 1);
+      setCount2(0);
+    }
+    if (count10 === 16 && count12 === 0) {
+      setCountPoint2(countPointPlayer2 + count1 + 1);
       setCount1(0);
     }
     setCount10(0);
@@ -1460,8 +1601,12 @@ function App() {
       setCount9((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
     }
-    if ((count11 === 1 || 15) && count12 === 0) {
+    if (count11 === 1 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
+      setCount1(0);
+    }
+    if (count11 === 15 && count12 === 0) {
+      setCountPoint2(countPointPlayer2 + count1 + 1);
       setCount1(0);
     }
     setCount11(0);
@@ -1584,6 +1729,30 @@ function App() {
       setCount9((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
       setCount11((prevCount) => prevCount + 1);
+    }
+    if (count12 === 9 && count7 === 0) {
+      setCountPoint2(countPointPlayer2 + count6 + 1);
+      setCount6(0);
+    }
+    if (count12 === 10 && count8 === 0) {
+      setCountPoint2(countPointPlayer2 + count5 + 1);
+      setCount5(0);
+    }
+    if (count12 === 11 && count9 === 0) {
+      setCountPoint2(countPointPlayer2 + count4 + 1);
+      setCount4(0);
+    }
+    if (count12 === 12 && count10 === 0) {
+      setCountPoint2(countPointPlayer2 + count3 + 1);
+      setCount3(0);
+    }
+    if (count12 === 13 && count11 === 0) {
+      setCountPoint2(countPointPlayer2 + count2 + 1);
+      setCount2(0);
+    }
+    if (count12 === 14 && count12 === 0) {
+      setCountPoint2(countPointPlayer2 + count1 + 1);
+      setCount1(0);
     }
     setCount12(0);
   }
