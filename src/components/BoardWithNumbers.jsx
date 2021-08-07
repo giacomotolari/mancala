@@ -3,32 +3,24 @@ import * as Functions from '../Functions.jsx';
 import Container from './Container.jsx';
 
 const Board = () => {
-  const pebble = <div className='pebble'></div>;
-  let pebbles = [pebble, pebble, pebble, pebble];
-  const emptyContainer = [];
-
-  const [count1, setCount1] = useState(pebbles);
-  const [count2, setCount2] = useState(pebbles);
-  const [count3, setCount3] = useState(pebbles);
-  const [count4, setCount4] = useState(pebbles);
-  const [count5, setCount5] = useState(pebbles);
-  const [count6, setCount6] = useState(pebbles);
-  const [countPointPlayer1, setCountPoint1] = useState(
-    useState(emptyContainer)
-  );
-  const [count7, setCount7] = useState(pebbles);
-  const [count8, setCount8] = useState(pebbles);
-  const [count9, setCount9] = useState(pebbles);
-  const [count10, setCount10] = useState(pebbles);
-  const [count11, setCount11] = useState(pebbles);
-  const [count12, setCount12] = useState(pebbles);
-  const [countPointPlayer2, setCountPoint2] = useState(
-    useState(emptyContainer)
-  );
+  const [count1, setCount1] = useState(4);
+  const [count2, setCount2] = useState(4);
+  const [count3, setCount3] = useState(4);
+  const [count4, setCount4] = useState(4);
+  const [count5, setCount5] = useState(4);
+  const [count6, setCount6] = useState(4);
+  const [countPointPlayer1, setCountPoint1] = useState(0);
+  const [count7, setCount7] = useState(4);
+  const [count8, setCount8] = useState(4);
+  const [count9, setCount9] = useState(4);
+  const [count10, setCount10] = useState(4);
+  const [count11, setCount11] = useState(4);
+  const [count12, setCount12] = useState(4);
+  const [countPointPlayer2, setCountPoint2] = useState(0);
 
   function incrementCount1() {
     if (count1 === 1) {
-      setCount2((prevCount) => prevCount + pebble);
+      setCount2((prevCount) => prevCount + 1);
     }
     if (count1 === 2) {
       setCount2((prevCount) => prevCount + 1);
@@ -144,48 +136,48 @@ const Board = () => {
       setCount12((prevCount) => prevCount + 1);
       setCountPoint2((prevCount) => prevCount + 1);
     }
-    if (count1 === 1 && count2 === emptyContainer) {
+    if (count1 === 1 && count2 === 0) {
       setCountPoint1(countPointPlayer1 + count11);
-      setCount11(emptyContainer);
+      setCount11(0);
     }
-    if (count1 === 2 && count3 === emptyContainer) {
+    if (count1 === 2 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10);
-      setCount10(emptyContainer);
+      setCount10(0);
     }
-    if (count1 === 3 && count4 === emptyContainer) {
+    if (count1 === 3 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count1 === 4 && count5 === emptyContainer) {
+    if (count1 === 4 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count1 === 5 && count6 === emptyContainer) {
+    if (count1 === 5 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    if (count1 === 15 && count2 === emptyContainer) {
+    if (count1 === 15 && count2 === 0) {
       setCountPoint1(countPointPlayer1 + count11 + 1);
-      setCount11(emptyContainer);
+      setCount11(0);
     }
-    if (count1 === 16 && count3 === emptyContainer) {
+    if (count1 === 16 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10 + 1);
-      setCount10(emptyContainer);
+      setCount10(0);
     }
-    if (count1 === 17 && count4 === emptyContainer) {
+    if (count1 === 17 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9 + 1);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count1 === 18 && count5 === emptyContainer) {
+    if (count1 === 18 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count1 === 19 && count6 === emptyContainer) {
+    if (count1 === 19 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
 
-    setCount1(emptyContainer);
+    setCount1(0);
   }
   function incrementCount2() {
     if (count2 === 1) {
@@ -305,39 +297,39 @@ const Board = () => {
       setCountPoint2((prevCount) => prevCount + 1);
       setCount1((prevCount) => prevCount + 1);
     }
-    if (count2 === 1 && count3 === emptyContainer) {
+    if (count2 === 1 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10);
-      setCount10(emptyContainer);
+      setCount10(0);
     }
-    if (count2 === 2 && count4 === emptyContainer) {
+    if (count2 === 2 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count2 === 3 && count5 === emptyContainer) {
+    if (count2 === 3 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count2 === 4 && count6 === emptyContainer) {
+    if (count2 === 4 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    if (count2 === 15 && count3 === emptyContainer) {
+    if (count2 === 15 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10 + 1);
-      setCount10(emptyContainer);
+      setCount10(0);
     }
-    if (count2 === 16 && count4 === emptyContainer) {
+    if (count2 === 16 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9 + 1);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count2 === 17 && count5 === emptyContainer) {
+    if (count2 === 17 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count2 === 18 && count6 === emptyContainer) {
+    if (count2 === 18 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    setCount2(emptyContainer);
+    setCount2(0);
   }
   function incrementCount3() {
     if (count3 === 1) {
@@ -457,31 +449,31 @@ const Board = () => {
       setCount1((prevCount) => prevCount + 1);
       setCount2((prevCount) => prevCount + 1);
     }
-    if (count3 === 1 && count4 === emptyContainer) {
+    if (count3 === 1 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count3 === 2 && count5 === emptyContainer) {
+    if (count3 === 2 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count3 === 3 && count6 === emptyContainer) {
+    if (count3 === 3 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    if (count3 === 15 && count4 === emptyContainer) {
+    if (count3 === 15 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9 + 1);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count3 === 16 && count5 === emptyContainer) {
+    if (count3 === 16 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count3 === 17 && count6 === emptyContainer) {
+    if (count3 === 17 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    setCount3(emptyContainer);
+    setCount3(0);
   }
   function incrementCount4() {
     if (count4 === 1) {
@@ -601,23 +593,23 @@ const Board = () => {
       setCount2((prevCount) => prevCount + 1);
       setCount3((prevCount) => prevCount + 1);
     }
-    if (count4 === 1 && count5 === emptyContainer) {
+    if (count4 === 1 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count4 === 2 && count6 === emptyContainer) {
+    if (count4 === 2 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    if (count4 === 15 && count5 === emptyContainer) {
+    if (count4 === 15 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count4 === 16 && count6 === emptyContainer) {
+    if (count4 === 16 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    setCount4(emptyContainer);
+    setCount4(0);
   }
   function incrementCount5() {
     if (count5 === 1) {
@@ -738,15 +730,15 @@ const Board = () => {
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
     }
-    if (count5 === 1 && count6 === emptyContainer) {
+    if (count5 === 1 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    if (count5 === 15 && count6 === emptyContainer) {
+    if (count5 === 15 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    setCount5(emptyContainer);
+    setCount5(0);
   }
   function incrementCount6() {
     if (count6 === 1) {
@@ -867,31 +859,31 @@ const Board = () => {
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
     }
-    if (count6 === 9 && count1 === emptyContainer) {
+    if (count6 === 9 && count1 === 0) {
       setCountPoint1(countPointPlayer1 + count12 + 1);
-      setCount12(emptyContainer);
+      setCount12(0);
     }
-    if (count6 === 10 && count2 === emptyContainer) {
+    if (count6 === 10 && count2 === 0) {
       setCountPoint1(countPointPlayer1 + count11 + 1);
-      setCount11(emptyContainer);
+      setCount11(0);
     }
-    if (count6 === 11 && count3 === emptyContainer) {
+    if (count6 === 11 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10 + 1);
-      setCount10(emptyContainer);
+      setCount10(0);
     }
-    if (count6 === 12 && count4 === emptyContainer) {
+    if (count6 === 12 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9 + 1);
-      setCount9(emptyContainer);
+      setCount9(0);
     }
-    if (count6 === 13 && count5 === emptyContainer) {
+    if (count6 === 13 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
-      setCount8(emptyContainer);
+      setCount8(0);
     }
-    if (count6 === 14 && count6 === emptyContainer) {
+    if (count6 === 14 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
-      setCount7(emptyContainer);
+      setCount7(0);
     }
-    setCount6(emptyContainer);
+    setCount6(0);
   }
   function incrementCount7() {
     if (count7 === 1) {
@@ -1012,47 +1004,47 @@ const Board = () => {
       setCount6((prevCount) => prevCount + 1);
       setCountPoint1((prevCount) => prevCount + 1);
     }
-    if (count7 === 1 && count8 === emptyContainer) {
+    if (count7 === 1 && count8 === 0) {
       setCountPoint2(countPointPlayer2 + count5);
-      setCount5(emptyContainer);
+      setCount5(0);
     }
-    if (count7 === 2 && count9 === emptyContainer) {
+    if (count7 === 2 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4);
-      setCount4(emptyContainer);
+      setCount4(0);
     }
-    if (count7 === 3 && count10 === emptyContainer) {
+    if (count7 === 3 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count7 === 4 && count11 === emptyContainer) {
+    if (count7 === 4 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count7 === 5 && count12 === emptyContainer) {
+    if (count7 === 5 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    if (count7 === 15 && count8 === emptyContainer) {
+    if (count7 === 15 && count8 === 0) {
       setCountPoint2(countPointPlayer2 + count5 + 1);
-      setCount5(emptyContainer);
+      setCount5(0);
     }
-    if (count7 === 16 && count9 === emptyContainer) {
+    if (count7 === 16 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4 + 1);
-      setCount4(emptyContainer);
+      setCount4(0);
     }
-    if (count7 === 17 && count10 === emptyContainer) {
+    if (count7 === 17 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3 + 1);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count7 === 18 && count11 === emptyContainer) {
+    if (count7 === 18 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2 + 1);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count7 === 19 && count12 === emptyContainer) {
+    if (count7 === 19 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1 + 1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    setCount7(emptyContainer);
+    setCount7(0);
   }
   function incrementCount8() {
     if (count8 === 1) {
@@ -1173,39 +1165,39 @@ const Board = () => {
       setCountPoint1((prevCount) => prevCount + 1);
       setCount7((prevCount) => prevCount + 1);
     }
-    if (count8 === 1 && count9 === emptyContainer) {
+    if (count8 === 1 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4);
-      setCount4(emptyContainer);
+      setCount4(0);
     }
     if (count8 === 2 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count8 === 3 && count11 === emptyContainer) {
+    if (count8 === 3 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count8 === 4 && count12 === emptyContainer) {
+    if (count8 === 4 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
       setCount1();
     }
-    if (count8 === 15 && count9 === emptyContainer) {
+    if (count8 === 15 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4 + 1);
-      setCount4(emptyContainer);
+      setCount4(0);
     }
-    if (count8 === 16 && count10 === emptyContainer) {
+    if (count8 === 16 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3 + 1);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count8 === 17 && count11 === emptyContainer) {
+    if (count8 === 17 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2 + 1);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count8 === 18 && count12 === emptyContainer) {
+    if (count8 === 18 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1 + 1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    setCount8(emptyContainer);
+    setCount8(0);
   }
   function incrementCount9() {
     if (count9 === 1) {
@@ -1326,31 +1318,31 @@ const Board = () => {
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
     }
-    if (count9 === 1 && count10 === emptyContainer) {
+    if (count9 === 1 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count9 === 2 && count11 === emptyContainer) {
+    if (count9 === 2 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count9 === 3 && count12 === emptyContainer) {
+    if (count9 === 3 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    if (count9 === 15 && count10 === emptyContainer) {
+    if (count9 === 15 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3 + 1);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count9 === 16 && count11 === emptyContainer) {
+    if (count9 === 16 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2 + 1);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count9 === 17 && count12 === emptyContainer) {
+    if (count9 === 17 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1 + 1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    setCount9(emptyContainer);
+    setCount9(0);
   }
   function incrementCount10() {
     if (count10 === 1) {
@@ -1471,23 +1463,23 @@ const Board = () => {
       setCount8((prevCount) => prevCount + 1);
       setCount9((prevCount) => prevCount + 1);
     }
-    if (count10 === 1 && count11 === emptyContainer) {
+    if (count10 === 1 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count10 === 2 && count12 === emptyContainer) {
+    if (count10 === 2 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    if (count10 === 15 && count11 === emptyContainer) {
+    if (count10 === 15 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2 + 1);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count10 === 16 && count12 === emptyContainer) {
+    if (count10 === 16 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1 + 1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    setCount10(emptyContainer);
+    setCount10(0);
   }
   function incrementCount11() {
     if (count11 === 1) {
@@ -1608,15 +1600,15 @@ const Board = () => {
       setCount9((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
     }
-    if (count11 === 1 && count12 === emptyContainer) {
+    if (count11 === 1 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    if ((count11 === 15) & emptyContainer & (count12 === emptyContainer)) {
+    if (count11 === 15 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1 + 1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    setCount11(emptyContainer);
+    setCount11(0);
   }
   function incrementCount12() {
     if (count12 === 1) {
@@ -1737,31 +1729,31 @@ const Board = () => {
       setCount10((prevCount) => prevCount + 1);
       setCount11((prevCount) => prevCount + 1);
     }
-    if (count12 === 9 && count7 === emptyContainer) {
+    if (count12 === 9 && count7 === 0) {
       setCountPoint2(countPointPlayer2 + count6 + 1);
-      setCount6(emptyContainer);
+      setCount6(0);
     }
-    if (count12 === 10 && count8 === emptyContainer) {
+    if (count12 === 10 && count8 === 0) {
       setCountPoint2(countPointPlayer2 + count5 + 1);
-      setCount5(emptyContainer);
+      setCount5(0);
     }
-    if (count12 === 11 && count9 === emptyContainer) {
+    if (count12 === 11 && count9 === 0) {
       setCountPoint2(countPointPlayer2 + count4 + 1);
-      setCount4(emptyContainer);
+      setCount4(0);
     }
-    if (count12 === 12 && count10 === emptyContainer) {
+    if (count12 === 12 && count10 === 0) {
       setCountPoint2(countPointPlayer2 + count3 + 1);
-      setCount3(emptyContainer);
+      setCount3(0);
     }
-    if (count12 === 13 && count11 === emptyContainer) {
+    if (count12 === 13 && count11 === 0) {
       setCountPoint2(countPointPlayer2 + count2 + 1);
-      setCount2(emptyContainer);
+      setCount2(0);
     }
-    if (count12 === 14 && count12 === emptyContainer) {
+    if (count12 === 14 && count12 === 0) {
       setCountPoint2(countPointPlayer2 + count1 + 1);
-      setCount1(emptyContainer);
+      setCount1(0);
     }
-    setCount12(emptyContainer);
+    setCount12(0);
   }
   return (
     <div className='board'>
