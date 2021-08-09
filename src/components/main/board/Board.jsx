@@ -1760,9 +1760,7 @@ const Board = () => {
 
   return (
     <div className='board'>
-        <PointsContainer
-            count={countPointPlayer2}
-          />
+      <PointsContainer count={countPointPlayer2} />
       <div className='containers'>
         <div className='player2Containers'>
           <Container
@@ -1853,9 +1851,7 @@ const Board = () => {
           />
         </div>
       </div>
-      <PointsContainer
-            count={countPointPlayer1}
-          />
+      <PointsContainer count={countPointPlayer1} />
     </div>
   );
 };

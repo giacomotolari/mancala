@@ -21,13 +21,12 @@ span {
   color: red;
 }
 .pebble {
-  background-color: blue;
-  box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
-  -webkit-box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
-  -moz-box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  background-image: url('./basketball.png');
+  background-image: url('./profilegiacomo2.png');
+  background-size: cover;
   border-radius: 50%;
-  width: 1.5vw;
-  height: 3.7vh;
-  margin: 0.2vw;
-  transform: rotate(-90deg);
+  width: 2.5vw;
+  height: 4.5vh;
+  margin: 0.3vw;
+  /* transform: rotate(-90deg); */
 }
