@@ -4,17 +4,23 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='Header'>
+      <h1>MANCALA</h1>
       <ul>
         <li>
-          <Link to='/'>Game</Link>
+          <Link className='link' to='/'>
+            Game
+          </Link>
         </li>
         <li>
-          <Link to='/Rules'>Rules</Link>
+          <Link className='link' to='/Rules'>
+            Rules
+          </Link>
         </li>
       </ul>
-      <h1>MANCALA</h1>
-      <h2 id='Specialtext'> </h2>
-      <h3 id='text'> </h3>
+      <section>
+        <h2 id='Specialtext'> </h2>
+        <h3 id='text'> </h3>
+      </section>
     </div>
   );
 };

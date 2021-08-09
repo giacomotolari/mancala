@@ -3,7 +3,7 @@ import * as Functions from '../Functions.jsx';
 import Container from './Container.jsx';
 
 const Board = () => {
-  let pebble = <div className='pebble'></div>;
+  // let pebble = <div className='pebble'></div>;
   const [count1, setCount1] = useState(4);
   const [count2, setCount2] = useState(4);
   const [count3, setCount3] = useState(4);
