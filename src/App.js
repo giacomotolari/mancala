@@ -1,16 +1,15 @@
 import './App.css';
-import Board from './components/Board.jsx';
-
+import Main from './components/main/Main';
+import Header from './components/header/Header';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     <div className='App'>
-      <section>
-        <h1>MANCALA</h1>
-        <h2 id='Specialtext'> </h2>
-        <h3 id='text'> </h3>
-      </section>
-      <Board />
+      <Router>
+        <Header />
+        <Main />
+      </Router>
     </div>
   );
 }

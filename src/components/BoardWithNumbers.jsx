@@ -3,6 +3,7 @@ import * as Functions from '../Functions.jsx';
 import Container from './Container.jsx';
 
 const Board = () => {
+  let pebble = <div className='pebble'></div>;
   const [count1, setCount1] = useState(4);
   const [count2, setCount2] = useState(4);
   const [count3, setCount3] = useState(4);
@@ -18,6 +19,1548 @@ const Board = () => {
   const [count12, setCount12] = useState(4);
   const [countPointPlayer2, setCountPoint2] = useState(0);
 
+  // TRASFORM THE NUMBERS IN HTML TAG WIHT CSS STYLES
+  // function convertNumberToPebble1() {
+  //   if (count1 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count1 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count1 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count1 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count1 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count1 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count1 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count1 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count1 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count1 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count1 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count1 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count1 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble2() {
+  //   if (count2 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count2 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count2 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count2 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count2 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count2 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count2 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count2 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count2 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count2 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count2 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count2 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count2 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble3() {
+  //   if (count3 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count3 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count3 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count3 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count3 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count3 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count3 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count3 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count3 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count3 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count3 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count3 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count3 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble4() {
+  //   if (count4 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count4 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count4 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count4 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count4 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count4 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count4 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count4 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count4 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count4 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count4 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count4 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count4 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble5() {
+  //   if (count5 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count5 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count5 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count5 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count5 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count5 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count5 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count5 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count5 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count5 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count5 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count5 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count5 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble6() {
+  //   if (count6 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count6 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count6 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count6 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count6 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count6 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count6 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count6 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count6 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count6 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count6 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count6 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count6 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble7() {
+  //   if (count7 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count7 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count7 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count7 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count7 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count7 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count7 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count7 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count7 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count7 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count7 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count7 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count7 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble8() {
+  //   if (count8 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count8 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count8 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count8 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count8 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count8 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count8 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count8 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count8 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count8 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count8 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count8 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count8 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble9() {
+  //   if (count9 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count9 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count9 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count9 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count9 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count9 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count9 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count9 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count9 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count9 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count9 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count9 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count9 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble10() {
+  //   if (count10 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count10 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count10 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count10 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count10 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count10 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count10 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count10 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count10 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count10 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count10 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count10 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count10 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble11() {
+  //   if (count11 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count11 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count11 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count11 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count11 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count11 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count11 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count11 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count11 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count11 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count11 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count11 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count11 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebble12() {
+  //   if (count12 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (count12 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (count12 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (count12 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count12 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count12 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count12 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (count12 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count12 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count12 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count12 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count12 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (count12 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebblePointPlayer1() {
+  //   if (countPointPlayer1 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (countPointPlayer1 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (countPointPlayer1 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer1 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer1 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer1 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer1 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer1 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer1 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer1 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer1 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer1 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer1 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // function convertNumberToPebblePointPlayer2() {
+  //   if (countPointPlayer2 === 1) {
+  //     setCount1(pebble);
+  //   }
+  //   if (countPointPlayer2 === 2) {
+  //     setCount1([pebble, pebble]);
+  //   }
+  //   if (countPointPlayer2 === 3) {
+  //     setCount1([pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer2 === 4) {
+  //     setCount1([pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer2 === 5) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer2 === 6) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer2 === 7) {
+  //     setCount1([pebble, pebble, pebble, pebble, pebble, pebble, pebble]);
+  //   }
+  //   if (countPointPlayer2 === 8) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer2 === 9) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer2 === 10) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer2 === 11) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer2 === 12) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  //   if (countPointPlayer2 === 13) {
+  //     setCount1([
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //       pebble,
+  //     ]);
+  //   }
+  // }
+  // LOGIK THAT MOVE THE PEBBLES TO THE CONTAINERS, AND RULES OF THE PLAY
   function incrementCount1() {
     if (count1 === 1) {
       setCount2((prevCount) => prevCount + 1);
@@ -136,7 +1679,7 @@ const Board = () => {
       setCount12((prevCount) => prevCount + 1);
       setCountPoint2((prevCount) => prevCount + 1);
     }
-    if (count1 === 1 && count2 === 0) {
+    if (count1 === 1 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count11);
       setCount11(0);
     }
@@ -149,14 +1692,14 @@ const Board = () => {
       setCount9(0);
     }
     if (count1 === 4 && count5 === 0) {
-      setCountPoint1(countPointPlayer1 + count8);
+      setCountPoint1(countPointPlayer1 + count9);
       setCount8(0);
     }
     if (count1 === 5 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
       setCount7(0);
     }
-    if (count1 === 15 && count2 === 0) {
+    if (count1 === 15 && count7 === 0) {
       setCountPoint1(countPointPlayer1 + count11 + 1);
       setCount11(0);
     }
@@ -180,7 +1723,7 @@ const Board = () => {
     setCount1(0);
   }
   function incrementCount2() {
-    if (count2 === 1) {
+    if (count7 === 1) {
       setCount3((prevCount) => prevCount + 1);
     }
     if (count2 === 2) {
@@ -1755,6 +3298,22 @@ const Board = () => {
     }
     setCount12(0);
   }
+
+  // convertNumberToPebble1();
+  // convertNumberToPebble2();
+  // convertNumberToPebble3();
+  // convertNumberToPebble4();
+  // convertNumberToPebble5();
+  // convertNumberToPebble6();
+  // convertNumberToPebble7();
+  // convertNumberToPebble8();
+  // convertNumberToPebble9();
+  // convertNumberToPebble10();
+  // convertNumberToPebble11();
+  // convertNumberToPebble12();
+  // convertNumberToPebblePointPlayer1();
+  // convertNumberToPebblePointPlayer2();
+
   return (
     <div className='board'>
       <div className='player2Points'>{countPointPlayer2}</div>

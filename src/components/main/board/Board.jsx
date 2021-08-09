@@ -1,25 +1,25 @@
+import './board.css';
 import React, { useState } from 'react';
-import * as Functions from '../Functions.jsx';
-import Container from './Container.jsx';
+import * as Functions from '../../../Functions.jsx';
+import Container from './container/Container.jsx';
 
 const Board = () => {
   let pebble = <div className='pebble'></div>;
   // const pebbles = [pebble, pebble, pebble, pebble];
-
   const [count1, Setcount1] = useState([pebble, pebble, pebble, pebble]);
   const [count2, Setcount2] = useState([pebble, pebble, pebble, pebble]);
   const [count3, Setcount3] = useState([pebble, pebble, pebble, pebble]);
   const [count4, Setcount4] = useState([pebble, pebble, pebble, pebble]);
   const [count5, Setcount5] = useState([pebble, pebble, pebble, pebble]);
   const [count6, Setcount6] = useState([pebble, pebble, pebble, pebble]);
-  const [countPointPlayer1, SetcountPointPlayer1] = useState([]);
+  const [countPointPlayer1, SetCountPointPlayer1] = useState([]);
   const [count7, Setcount7] = useState([pebble, pebble, pebble, pebble]);
   const [count8, Setcount8] = useState([pebble, pebble, pebble, pebble]);
   const [count9, Setcount9] = useState([pebble, pebble, pebble, pebble]);
   const [count10, Setcount10] = useState([pebble, pebble, pebble, pebble]);
   const [count11, Setcount11] = useState([pebble, pebble, pebble, pebble]);
   const [count12, Setcount12] = useState([pebble, pebble, pebble, pebble]);
-  const [countPointPlayer2, SetcountPointPlayer2] = useState([]);
+  const [countPointPlayer2, SetCountPointPlayer2] = useState([]);
 
   function incrementCount1() {
     if (count1.length === 1) {
@@ -480,33 +480,33 @@ const Board = () => {
     Setcount3([]);
   }
   function incrementCount4() {
-    if (count4.legth === 1) {
+    if (count4.length === 1) {
       count5.push(pebble);
     }
-    if (count4.legth === 2) {
+    if (count4.length === 2) {
       count5.push(pebble);
       count6.push(pebble);
     }
-    if (count4.legth === 3) {
+    if (count4.length === 3) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
       Functions.oneRoundMore();
     }
-    if (count4.legth === 4) {
+    if (count4.length === 4) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
       count7.push(pebble);
     }
-    if (count4.legth === 5) {
+    if (count4.length === 5) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
       count7.push(pebble);
       count8.push(pebble);
     }
-    if (count4.legth === 6) {
+    if (count4.length === 6) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -514,7 +514,7 @@ const Board = () => {
       count8.push(pebble);
       count9.push(pebble);
     }
-    if (count4.legth === 7) {
+    if (count4.length === 7) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -523,7 +523,7 @@ const Board = () => {
       count9.push(pebble);
       count10.push(pebble);
     }
-    if (count4.legth === 8) {
+    if (count4.length === 8) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -533,7 +533,7 @@ const Board = () => {
       count10.push(pebble);
       count11.push(pebble);
     }
-    if (count4.legth === 9) {
+    if (count4.length === 9) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -544,7 +544,7 @@ const Board = () => {
       count11.push(pebble);
       count12.push(pebble);
     }
-    if (count4.legth === 10) {
+    if (count4.length === 10) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -555,7 +555,7 @@ const Board = () => {
       count12.push(pebble);
       countPointPlayer2.push(pebble);
     }
-    if (count4.legth === 11) {
+    if (count4.length === 11) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -568,7 +568,7 @@ const Board = () => {
       countPointPlayer2.push(pebble);
       count1.push(pebble);
     }
-    if (count4.legth === 12) {
+    if (count4.length === 12) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -582,7 +582,7 @@ const Board = () => {
       count1.push(pebble);
       count2.push(pebble);
     }
-    if (count4.legth === 13) {
+    if (count4.length === 13) {
       count5.push(pebble);
       count6.push(pebble);
       countPointPlayer1.push(pebble);
@@ -597,19 +597,19 @@ const Board = () => {
       count2.push(pebble);
       count3.length.push(pebble);
     }
-    if (count4.legth === 1 && count5 === []) {
+    if (count4.length === 1 && count5 === []) {
       countPointPlayer1.push(...count8);
       Setcount8([]);
     }
-    if (count4.legth === 2 && count6 === []) {
+    if (count4.length === 2 && count6 === []) {
       countPointPlayer1.push(...count7);
       Setcount7([]);
     }
-    if (count4.legth === 15 && count5 === []) {
+    if (count4.length === 15 && count5 === []) {
       countPointPlayer1.push(...count8, pebble);
       Setcount8([]);
     }
-    if (count4.legth === 16 && count6 === []) {
+    if (count4.length === 16 && count6 === []) {
       countPointPlayer1.push(...count7, pebble);
       Setcount7([]);
     }
