@@ -21,10 +21,16 @@ ul {
   margin: 0.8vw;
   font-size: 1.6vw;
   text-decoration: none;
-  color: white;
-}
-.link:focus {
   color: blue;
+}
+.link:focus{
+  color: white;
+  font-weight: bold;
+
+}
+.link:hover {
+  color: red;
+  font-weight: bold;
 }
 h1 {
   position: relative;

@@ -1,0 +1,31 @@
+.Rules {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  /* bottom: 85%; */
+}
+iframe {
+  width: 40%;
+  min-height: 30%;
+}
+section {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.Rules p {
+  color: white;
+  font-size: 1.2vw;
+}
+span {
+  color: red;
+  font-weight: bold;
+}
+.imageRules2,
+.imageRules1 {
+  width: 50%;
+  height: 20%;
+}

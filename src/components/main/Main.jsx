@@ -1,5 +1,4 @@
 import './main.css';
-
 import { Switch, Route } from 'react-router-dom';
 import Board from './board/Board';
 import Rules from './rules/Rules';

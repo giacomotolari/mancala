@@ -1,0 +1,33 @@
+.container {
+  background-image: url('./woodtexture-29.jpg');
+  border-radius: 45%;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  cursor: grabbing;
+}
+.container:hover {
+  border: 1px solid red;
+}
+span {
+  color: red;
+}
+.pebble {
+  background-color: blue;
+  box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 12px 5px 90px -3px rgba(0, 0, 0, 0.5) inset;
+  border-radius: 50%;
+  width: 1.5vw;
+  height: 3.7vh;
+  margin: 0.2vw;
+  transform: rotate(-90deg);
+}
