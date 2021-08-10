@@ -18,6 +18,7 @@ const Header = () => {
         </li>
       </ul>
       <section>
+        <h4 id='roundOftext'>PLAYER 1 START</h4>
         <h2 id='Specialtext'> </h2>
         <h3 id='text'> </h3>
       </section>

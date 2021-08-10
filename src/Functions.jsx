@@ -55,4 +55,16 @@ export function oneRoundMore() {
 export function cleanSpecialText() {
   document.getElementById('Specialtext').innerHTML = '';
 }
-
+export function winnerPlayer2Text(points) {
+  document.getElementById(
+    'Specialtext'
+  ).innerHTML = `THE WINNER IS PLAYER 2 WITH ${points}`;
+}
+export function winnerPlayer1Text(points) {
+  document.getElementById(
+    'Specialtext'
+  ).innerHTML = `THE WINNER IS PLAYER 1 WITH ${points}`;
+}
+export function drawText() {
+  document.getElementById('Specialtext').innerHTML = 'DRAW';
+}
