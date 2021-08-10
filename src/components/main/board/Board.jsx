@@ -39,7 +39,7 @@ const Board = () => {
         countPointPlayer1 + count6 + count5 + count4 + count3 + count2 + count1
       );
     } else {
-      Functions.drawText([countPointPlayer2, countPointPlayer1]);
+      Functions.drawText([...countPointPlayer2, countPointPlayer1]);
     }
   }
   function disablePlayer1EnablePlayer2() {
