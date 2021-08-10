@@ -1,7 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 
-
-
 export function textMoveContainer1() {
   document.getElementById('text').innerHTML =
     'you moved the pebbles of container 1';
@@ -54,3 +52,8 @@ export function oneRoundMore() {
   document.getElementById('Specialtext').innerHTML =
     'Nice! You have gained another round!';
 }
+export function cleanSpecialText() {
+  document.getElementById('Specialtext').innerHTML = '';
+}
+
+
