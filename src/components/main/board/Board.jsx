@@ -38,6 +38,48 @@ const Board = () => {
       Functions.cleanSpecialText();
     }
   }
+  function containersPlayer1End() {
+    if (
+      count1 === 0 &&
+      count2 === 0 &&
+      count3 === 0 &&
+      count4 === 0 &&
+      count5 === 0 &&
+      count6 === 0
+    ) {
+      setCountPoint2(
+        (prevCount) =>
+          prevCount + (count7 + count8 + count9 + count10 + count11 + count12)
+      );
+      setCount7(0);
+      setCount8(0);
+      setCount9(0);
+      setCount10(0);
+      setCount11(0);
+      setCount12(0);
+    }
+  }
+  function containersPlayer2End() {
+    if (
+      count7 === 0 &&
+      count8 === 0 &&
+      count9 === 0 &&
+      count10 === 0 &&
+      count11 === 0 &&
+      count12 === 0
+    ) {
+      setCountPoint1(
+        (prevCount) =>
+          prevCount + (count1 + count2 + count3 + count4 + count5 + count6)
+      );
+      setCount1(0);
+      setCount2(0);
+      setCount3(0);
+      setCount4(0);
+      setCount5(0);
+      setCount6(0);
+    }
+  }
 
   function incrementCount1() {
     if (count1 === 1) {
@@ -1788,6 +1830,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount12();
               Functions.textMoveContainer12();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1796,6 +1840,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount11();
               Functions.textMoveContainer11();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1804,6 +1850,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount10();
               Functions.textMoveContainer10();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1812,6 +1860,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount9();
               Functions.textMoveContainer9();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1820,6 +1870,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount8();
               Functions.textMoveContainer8();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1828,6 +1880,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount7();
               Functions.textMoveContainer7();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
         </div>
@@ -1838,6 +1892,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount1();
               Functions.textMoveContainer1();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1846,6 +1902,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount2();
               Functions.textMoveContainer2();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1854,6 +1912,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount3();
               Functions.textMoveContainer3();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1862,6 +1922,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount4();
               Functions.textMoveContainer4();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1870,6 +1932,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount5();
               Functions.textMoveContainer5();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
           <Container
@@ -1878,6 +1942,8 @@ const Board = () => {
               onCleanSpecialText();
               incrementCount6();
               Functions.textMoveContainer6();
+              containersPlayer2End();
+              containersPlayer1End();
             }}
           />
         </div>
