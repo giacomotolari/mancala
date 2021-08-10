@@ -19,7 +19,17 @@ const Board = () => {
   const [count11, setCount11] = useState(4);
   const [count12, setCount12] = useState(4);
   const [countPointPlayer2, setCountPoint2] = useState(0);
+  const [disablePlayer1, setDisablePlayer1] = React.useState(false);
+  const [disablePlayer2, setDisablePlayer2] = React.useState(true);
 
+  function disablePlayer1EnablePlayer2() {
+    setDisablePlayer1(true);
+    setDisablePlayer2(false);
+  }
+  function disablePlayer2EnablePlayer1() {
+    setDisablePlayer2(true);
+    setDisablePlayer1(false);
+  }
   function onCleanSpecialText() {
     if (
       count1 !== 6 ||
@@ -38,6 +48,7 @@ const Board = () => {
       Functions.cleanSpecialText();
     }
   }
+
   function containersPlayer1End() {
     if (
       count1 === 0 &&
@@ -51,6 +62,12 @@ const Board = () => {
         (prevCount) =>
           prevCount + (count7 + count8 + count9 + count10 + count11 + count12)
       );
+      setCount1(0);
+      setCount2(0);
+      setCount3(0);
+      setCount4(0);
+      setCount5(0);
+      setCount6(0);
       setCount7(0);
       setCount8(0);
       setCount9(0);
@@ -78,27 +95,37 @@ const Board = () => {
       setCount4(0);
       setCount5(0);
       setCount6(0);
+      setCount7(0);
+      setCount8(0);
+      setCount9(0);
+      setCount10(0);
+      setCount11(0);
+      setCount12(0);
     }
   }
 
   function incrementCount1() {
     if (count1 === 1) {
       setCount2((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 2) {
       setCount2((prevCount) => prevCount + 1);
       setCount3((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 3) {
       setCount2((prevCount) => prevCount + 1);
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 4) {
       setCount2((prevCount) => prevCount + 1);
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 5) {
       setCount2((prevCount) => prevCount + 1);
@@ -106,6 +133,7 @@ const Board = () => {
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
       setCount6((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 6) {
       setCount2((prevCount) => prevCount + 1);
@@ -124,6 +152,7 @@ const Board = () => {
       setCount6((prevCount) => prevCount + 1);
       setCountPoint1((prevCount) => prevCount + 1);
       setCount7((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 8) {
       setCount2((prevCount) => prevCount + 1);
@@ -134,6 +163,7 @@ const Board = () => {
       setCountPoint1((prevCount) => prevCount + 1);
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 9) {
       setCount2((prevCount) => prevCount + 1);
@@ -145,6 +175,7 @@ const Board = () => {
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
       setCount9((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 10) {
       setCount2((prevCount) => prevCount + 1);
@@ -156,6 +187,7 @@ const Board = () => {
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 11) {
       setCount2((prevCount) => prevCount + 1);
@@ -169,6 +201,7 @@ const Board = () => {
       setCount9((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
       setCount11((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 12) {
       setCount2((prevCount) => prevCount + 1);
@@ -183,6 +216,7 @@ const Board = () => {
       setCount10((prevCount) => prevCount + 1);
       setCount11((prevCount) => prevCount + 1);
       setCount12((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 13) {
       setCount2((prevCount) => prevCount + 1);
@@ -198,46 +232,57 @@ const Board = () => {
       setCount11((prevCount) => prevCount + 1);
       setCount12((prevCount) => prevCount + 1);
       setCountPoint2((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 1 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count11);
       setCount11(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 2 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10);
       setCount10(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 3 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
       setCount9(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 4 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
       setCount8(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 5 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
       setCount7(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 15 && count7 === 0) {
       setCountPoint1(countPointPlayer1 + count11 + 1);
       setCount11(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 16 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10 + 1);
       setCount10(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 17 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9 + 1);
       setCount9(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 18 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
       setCount8(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count1 === 19 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
       setCount7(0);
+      disablePlayer1EnablePlayer2();
     }
 
     setCount1(0);
@@ -245,21 +290,25 @@ const Board = () => {
   function incrementCount2() {
     if (count7 === 1) {
       setCount3((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 2) {
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 3) {
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 4) {
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
       setCount6((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 5) {
       setCount3((prevCount) => prevCount + 1);
@@ -268,6 +317,7 @@ const Board = () => {
       setCount6((prevCount) => prevCount + 1);
       setCountPoint1((prevCount) => prevCount + 1);
       Functions.oneRoundMore();
+      disablePlayer2EnablePlayer1();
     }
     if (count2 === 6) {
       setCount3((prevCount) => prevCount + 1);
@@ -276,6 +326,7 @@ const Board = () => {
       setCount6((prevCount) => prevCount + 1);
       setCountPoint1((prevCount) => prevCount + 1);
       setCount7((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 7) {
       setCount3((prevCount) => prevCount + 1);
@@ -285,6 +336,7 @@ const Board = () => {
       setCountPoint1((prevCount) => prevCount + 1);
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 8) {
       setCount3((prevCount) => prevCount + 1);
@@ -295,6 +347,7 @@ const Board = () => {
       setCount7((prevCount) => prevCount + 1);
       setCount8((prevCount) => prevCount + 1);
       setCount9((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 9) {
       setCount3((prevCount) => prevCount + 1);
@@ -306,6 +359,7 @@ const Board = () => {
       setCount8((prevCount) => prevCount + 1);
       setCount9((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 10) {
       setCount3((prevCount) => prevCount + 1);
@@ -317,6 +371,7 @@ const Board = () => {
       setCount8((prevCount) => prevCount + 1);
       setCount10((prevCount) => prevCount + 1);
       setCount11((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 11) {
       setCount3((prevCount) => prevCount + 1);
@@ -330,6 +385,7 @@ const Board = () => {
       setCount10((prevCount) => prevCount + 1);
       setCount11((prevCount) => prevCount + 1);
       setCount12((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 12) {
       setCount3((prevCount) => prevCount + 1);
@@ -344,6 +400,7 @@ const Board = () => {
       setCount11((prevCount) => prevCount + 1);
       setCount12((prevCount) => prevCount + 1);
       setCountPoint2((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 13) {
       setCount3((prevCount) => prevCount + 1);
@@ -359,38 +416,47 @@ const Board = () => {
       setCount12((prevCount) => prevCount + 1);
       setCountPoint2((prevCount) => prevCount + 1);
       setCount1((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 1 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10);
       setCount10(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 2 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9);
       setCount9(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 3 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8);
       setCount8(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 4 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7);
       setCount7(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 15 && count3 === 0) {
       setCountPoint1(countPointPlayer1 + count10 + 1);
       setCount10(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 16 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count9 + 1);
       setCount9(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 17 && count5 === 0) {
       setCountPoint1(countPointPlayer1 + count8 + 1);
       setCount8(0);
+      disablePlayer1EnablePlayer2();
     }
     if (count2 === 18 && count6 === 0) {
       setCountPoint1(countPointPlayer1 + count7 + 1);
       setCount7(0);
+      disablePlayer1EnablePlayer2();
     }
     setCount2(0);
   }
@@ -1819,12 +1885,27 @@ const Board = () => {
     setCount12(0);
   }
 
+  // function disableContainers1() {
+  //   if (
+  //     count1 === 6 ||
+  //     count2 === 5 ||
+  //     count3 === 4 ||
+  //     count4 === 3 ||
+  //     count5 === 2 ||
+  //     count6 === 1
+  //   ) {
+  //     setDisablePlayer1(false);
+  //   } else {
+  //     setDisablePlayer1(true);
+  //   }
+  // }
   return (
     <div className='board'>
       <PointsContainer count={countPointPlayer2} />
       <div className='containers'>
         <div className='player2Containers'>
           <Container
+            disable={disablePlayer2}
             count={count12}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1835,6 +1916,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer2}
             count={count11}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1845,6 +1927,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer2}
             count={count10}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1855,6 +1938,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer2}
             count={count9}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1865,6 +1949,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer2}
             count={count8}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1875,6 +1960,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer2}
             count={count7}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1887,6 +1973,7 @@ const Board = () => {
         </div>
         <div className='player1Containers'>
           <Container
+            disable={disablePlayer1}
             count={count1}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1897,6 +1984,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer1}
             count={count2}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1907,6 +1995,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer1}
             count={count3}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1917,6 +2006,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer1}
             count={count4}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1927,6 +2017,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer1}
             count={count5}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1937,6 +2028,7 @@ const Board = () => {
             }}
           />
           <Container
+            disable={disablePlayer1}
             count={count6}
             containerFunction={() => {
               onCleanSpecialText();
@@ -1948,6 +2040,7 @@ const Board = () => {
           />
         </div>
       </div>
+
       <PointsContainer count={countPointPlayer1} />
     </div>
   );

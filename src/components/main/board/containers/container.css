@@ -1,4 +1,6 @@
 .container {
+  border: none;
+  /* outline: none; */
   background-image: url('./woodtexture-29.jpg');
   border-radius: 45%;
   width: 30%;
@@ -21,8 +23,8 @@ span {
   color: red;
 }
 .pebble {
- background-image: url('./basketball.png');
-  background-image: url('./pebble4.png'); 
+  background-image: url('./basketball.png');
+  background-image: url('./pebble4.png');
   background-image: url('./pebble3.png');
   background-image: url('./pebble5.png');
   background-image: url('./pebble6.png');
@@ -31,6 +33,6 @@ span {
   background-size: cover;
   border-radius: 50%;
   width: 2.2vw;
-  height: 4.0vh;
+  height: 4vh;
   margin: 0.3vw;
 }

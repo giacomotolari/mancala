@@ -56,4 +56,3 @@ export function cleanSpecialText() {
   document.getElementById('Specialtext').innerHTML = '';
 }
 
-
