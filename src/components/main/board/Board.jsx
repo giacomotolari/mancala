@@ -104,66 +104,6 @@ const Board = () => {
     // }
   }
 
-  function containersPlayer1End() {
-    if (
-      count1 === 0 &&
-      count2 === 0 &&
-      count3 === 0 &&
-      count4 === 0 &&
-      count5 === 0 &&
-      count6 === 0
-    ) {
-      setCountPoint2(
-        (prevCount) =>
-          prevCount + (count7 + count8 + count9 + count10 + count11 + count12)
-      );
-      setCount1(0);
-      setCount2(0);
-      setCount3(0);
-      setCount4(0);
-      setCount5(0);
-      setCount6(0);
-      setCount7(0);
-      setCount8(0);
-      setCount9(0);
-      setCount10(0);
-      setCount11(0);
-      setCount12(0);
-      document.getElementById('roundOftext').innerHTML = 'GAME OVER ';
-      document.getElementById('text').innerHTML = '';
-    }
-  }
-
-  function containersPlayer2End() {
-    if (
-      count7 === 0 &&
-      count8 === 0 &&
-      count9 === 0 &&
-      count10 === 0 &&
-      count11 === 0 &&
-      count12 === 0
-    ) {
-      setCountPoint1(
-        (prevCount) =>
-          prevCount + (count1 + count2 + count3 + count4 + count5 + count6)
-      );
-      setCount1(0);
-      setCount2(0);
-      setCount3(0);
-      setCount4(0);
-      setCount5(0);
-      setCount6(0);
-      setCount7(0);
-      setCount8(0);
-      setCount9(0);
-      setCount10(0);
-      setCount11(0);
-      setCount12(0);
-      document.getElementById('roundOftext').innerHTML = 'GAME OVER';
-      document.getElementById('text').innerHTML = '';
-    }
-  }
-
   function container1() {
     if (count1 === 1) {
       setCount2((prevCount) => prevCount + 1);
@@ -347,8 +287,6 @@ const Board = () => {
     }
 
     setCount1(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container2() {
     if (count2 === 1) {
@@ -522,8 +460,6 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount2(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container3() {
     if (count3 === 1) {
@@ -687,8 +623,6 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount3(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container4() {
     if (count4 === 1) {
@@ -842,8 +776,6 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount4(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container5() {
     if (count5 === 1) {
@@ -988,8 +920,6 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount5(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container6() {
     if (count6 === 1) {
@@ -1006,6 +936,18 @@ const Board = () => {
       count5 === 0
     ) {
       setCountPoint1((prevCount) => prevCount + 1);
+      setCountPoint2(
+        (prevCount) =>
+          prevCount + (count7 + count8 + count9 + count10 + count11 + count12)
+      );
+      setCount7(0);
+      setCount8(0);
+      setCount9(0);
+      setCount10(0);
+      setCount11(0);
+      setCount12(0);
+      document.getElementById('roundOftext').innerHTML = 'GAME OVER ';
+      document.getElementById('text').innerHTML = '';
       disablePlayer1EnablePlayer2();
     }
     if (count6 === 2) {
@@ -1165,8 +1107,6 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount6(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container7() {
     if (count7 === 1) {
@@ -1351,8 +1291,6 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount7(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container8() {
     if (count8 === 1) {
@@ -1527,8 +1465,6 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount8(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container9() {
     if (count9 === 1) {
@@ -1693,8 +1629,6 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount9(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container10() {
     if (count10 === 1) {
@@ -1849,8 +1783,6 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount10(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container11() {
     if (count11 === 1) {
@@ -1995,8 +1927,6 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount11(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   function container12() {
     if (count12 === 1) {
@@ -2013,6 +1943,18 @@ const Board = () => {
       count11 === 0
     ) {
       setCountPoint2((prevCount) => prevCount + 1);
+      setCountPoint1(
+        (prevCount) =>
+          prevCount + (count1 + count2 + count3 + count4 + count5 + count6)
+      );
+      setCount1(0);
+      setCount2(0);
+      setCount3(0);
+      setCount4(0);
+      setCount5(0);
+      setCount6(0);
+      document.getElementById('roundOftext').innerHTML = 'GAME OVER';
+      document.getElementById('text').innerHTML = '';
       disablePlayer2EnablePlayer1();
     }
     if (count12 === 2) {
@@ -2172,8 +2114,6 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount12(0);
-    containersPlayer2End();
-    containersPlayer1End();
   }
   if (
     count1 === 0 &&
@@ -2192,20 +2132,6 @@ const Board = () => {
     getWinner();
   }
 
-  // function disableContainers1() {
-  //   if (
-  //     count1 === 6 ||
-  //     count2 === 5 ||
-  //     count3 === 4 ||
-  //     count4 === 3 ||
-  //     count5 === 2 ||
-  //     count6 === 1
-  //   ) {
-  //     setDisablePlayer1(false);
-  //   } else {
-  //     setDisablePlayer1(true);
-  //   }
-  // }
   return (
     <div className='board'>
       <p className='pointsPlayer2'>{countPointPlayer2}</p>

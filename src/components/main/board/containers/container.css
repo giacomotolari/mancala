@@ -1,7 +1,7 @@
 .container {
   border: none;
   /* outline: none; */
-  background-image: url('./woodtexture-29.jpg');
+  background-image: url('../../../../assets/woodtexture-29.jpg');
   border-radius: 45%;
   width: 20%;
   height: 110%;
@@ -23,11 +23,11 @@ span {
   color: red;
 }
 .pebble {
-  background-image: url('./basketball.png');
+  /* background-image: url('./basketball.png');
   background-image: url('./pebble4.png');
   background-image: url('./pebble3.png');
-  background-image: url('./pebble5.png');
-  background-image: url('./pebble6.png');
+  background-image: url('./pebble5.png'); */
+  background-image: url('../../../../assets/pebble6.png');
   /* -webkit-box-shadow: 9px 20px 21px -2px rgba(0,0,0,0.83); 
   box-shadow: 9px 20px 21px -2px rgba(0,0,0,0.83); */
   background-size: cover;

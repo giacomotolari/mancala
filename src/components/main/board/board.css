@@ -1,7 +1,7 @@
 .board {
   overflow: hidden;
   /* background-color: burlywood; */
-  background-image: url('./27wTQC.png');
+  background-image: url('../../../assets/27wTQC.png');
   /* border: 1px solid brown; */
   border-radius: 5%;
   width: 98%;
