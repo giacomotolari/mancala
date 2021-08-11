@@ -21,7 +21,7 @@ ul {
   margin: 0.8vw;
   font-size: 1.6vw;
   text-decoration: none;
-  color: blue;
+  color: #dfbfb1;
 }
 .link:focus {
   color: white;

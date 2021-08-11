@@ -1,13 +1,17 @@
 import './container.css';
 
-const container = (props) => {
+const Container = (props) => {
   return (
-    <button className='container' disabled={props.disable} onClick={props.containerFunction}>
+    <button
+      className='container'
+      disabled={props.disable}
+      onClick={props.containerFunction}
+    >
       {Array.from(Array(props.count).keys()).map(
-        (n) => (n = <div className='pebble'></div>)
+        (n) => (n = <div key={`${n}${Math.random()}${Math.random()}`} className='pebble'></div>)
       )}
     </button>
   );
 };
 
-export default container;
+export default Container;

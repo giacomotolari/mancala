@@ -24,22 +24,13 @@ const Board = () => {
 
   function getWinner() {
     if (countPointPlayer2 > countPointPlayer1) {
-      Functions.winnerPlayer2Text(
-        countPointPlayer2 +
-          count12 +
-          count11 +
-          count10 +
-          count9 +
-          count8 +
-          count7
-      );
+      Functions.winnerPlayer2Text(countPointPlayer2);
     }
     if (countPointPlayer2 < countPointPlayer1) {
-      Functions.winnerPlayer1Text(
-        countPointPlayer1 + count6 + count5 + count4 + count3 + count2 + count1
-      );
-    } else {
-      Functions.drawText([...countPointPlayer2, countPointPlayer1]);
+      Functions.winnerPlayer1Text(countPointPlayer1);
+    }
+    if (countPointPlayer2 === countPointPlayer1) {
+      Functions.drawText();
     }
   }
   function disablePlayer1EnablePlayer2() {
@@ -69,6 +60,48 @@ const Board = () => {
     ) {
       Functions.cleanSpecialText();
     }
+    if (
+      count1 === 0 &&
+      count2 === 0 &&
+      count3 === 0 &&
+      count4 === 0 &&
+      count5 === 0 &&
+      count6 === 0
+    ) {
+      Functions.cleanSpecialText();
+    }
+    if (
+      count7 === 0 &&
+      count8 === 0 &&
+      count9 === 0 &&
+      count10 === 0 &&
+      count11 === 0 &&
+      count12 === 0
+    ) {
+      Functions.cleanSpecialText();
+    }
+  }
+  function onCleanSpecialTextWennPlayEnd() {
+    if (
+      count1 === 0 &&
+      count2 === 0 &&
+      count3 === 0 &&
+      count4 === 0 &&
+      count5 === 0 &&
+      count6 === 0
+    ) {
+      Functions.cleanSpecialText();
+    }
+    // if (
+    //   count7 === 0 &&
+    //   count8 === 0 &&
+    //   count9 === 0 &&
+    //   count10 === 0 &&
+    //   count11 === 0 &&
+    //   count12 === 0
+    // ) {
+    //   Functions.cleanSpecialText();
+    // }
   }
 
   function containersPlayer1End() {
@@ -98,9 +131,9 @@ const Board = () => {
       setCount12(0);
       document.getElementById('roundOftext').innerHTML = 'GAME OVER ';
       document.getElementById('text').innerHTML = '';
-      getWinner();
     }
   }
+
   function containersPlayer2End() {
     if (
       count7 === 0 &&
@@ -128,7 +161,6 @@ const Board = () => {
       setCount12(0);
       document.getElementById('roundOftext').innerHTML = 'GAME OVER';
       document.getElementById('text').innerHTML = '';
-      getWinner();
     }
   }
 
@@ -262,6 +294,7 @@ const Board = () => {
       setCountPoint2((prevCount) => prevCount + 1);
       disablePlayer1EnablePlayer2();
     }
+
     if (count1 === 1 && count4 === 0) {
       setCountPoint1(countPointPlayer1 + count11);
       setCount11(0);
@@ -314,6 +347,8 @@ const Board = () => {
     }
 
     setCount1(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container2() {
     if (count2 === 1) {
@@ -487,6 +522,8 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount2(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container3() {
     if (count3 === 1) {
@@ -650,6 +687,8 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount3(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container4() {
     if (count4 === 1) {
@@ -803,6 +842,8 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount4(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container5() {
     if (count5 === 1) {
@@ -947,12 +988,25 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount5(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container6() {
     if (count6 === 1) {
       setCountPoint1((prevCount) => prevCount + 1);
       Functions.oneRoundMore();
       disablePlayer2EnablePlayer1();
+    }
+    if (
+      count6 === 1 &&
+      count1 === 0 &&
+      count2 === 0 &&
+      count3 === 0 &&
+      count4 === 0 &&
+      count5 === 0
+    ) {
+      setCountPoint1((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
     }
     if (count6 === 2) {
       setCountPoint1((prevCount) => prevCount + 1);
@@ -1111,6 +1165,8 @@ const Board = () => {
       disablePlayer1EnablePlayer2();
     }
     setCount6(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container7() {
     if (count7 === 1) {
@@ -1295,6 +1351,8 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount7(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container8() {
     if (count8 === 1) {
@@ -1469,6 +1527,8 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount8(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container9() {
     if (count9 === 1) {
@@ -1633,6 +1693,8 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount9(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container10() {
     if (count10 === 1) {
@@ -1787,6 +1849,8 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount10(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container11() {
     if (count11 === 1) {
@@ -1931,12 +1995,25 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount11(0);
+    containersPlayer2End();
+    containersPlayer1End();
   }
   function container12() {
     if (count12 === 1) {
       setCountPoint2((prevCount) => prevCount + 1);
       Functions.oneRoundMore();
       disablePlayer1EnablePlayer2();
+    }
+    if (
+      count12 === 1 &&
+      count7 === 0 &&
+      count8 === 0 &&
+      count9 === 0 &&
+      count10 === 0 &&
+      count11 === 0
+    ) {
+      setCountPoint2((prevCount) => prevCount + 1);
+      disablePlayer2EnablePlayer1();
     }
     if (count12 === 2) {
       setCountPoint2((prevCount) => prevCount + 1);
@@ -2095,6 +2172,24 @@ const Board = () => {
       disablePlayer2EnablePlayer1();
     }
     setCount12(0);
+    containersPlayer2End();
+    containersPlayer1End();
+  }
+  if (
+    count1 === 0 &&
+    count2 === 0 &&
+    count3 === 0 &&
+    count4 === 0 &&
+    count5 === 0 &&
+    count6 === 0 &&
+    count7 === 0 &&
+    count8 === 0 &&
+    count9 === 0 &&
+    count10 === 0 &&
+    count11 === 0 &&
+    count12 === 0
+  ) {
+    getWinner();
   }
 
   // function disableContainers1() {
@@ -2122,10 +2217,11 @@ const Board = () => {
             count={count12}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container12();
               Functions.textMoveContainer12();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2133,10 +2229,11 @@ const Board = () => {
             count={count11}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container11();
               Functions.textMoveContainer11();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2144,10 +2241,11 @@ const Board = () => {
             count={count10}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container10();
               Functions.textMoveContainer10();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2155,10 +2253,11 @@ const Board = () => {
             count={count9}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container9();
               Functions.textMoveContainer9();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2166,10 +2265,11 @@ const Board = () => {
             count={count8}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container8();
               Functions.textMoveContainer8();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2177,10 +2277,11 @@ const Board = () => {
             count={count7}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container7();
               Functions.textMoveContainer7();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
         </div>
@@ -2190,10 +2291,11 @@ const Board = () => {
             count={count1}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container1();
               Functions.textMoveContainer1();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2201,10 +2303,11 @@ const Board = () => {
             count={count2}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container2();
               Functions.textMoveContainer2();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2212,10 +2315,11 @@ const Board = () => {
             count={count3}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container3();
               Functions.textMoveContainer3();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2223,10 +2327,11 @@ const Board = () => {
             count={count4}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container4();
               Functions.textMoveContainer4();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2234,10 +2339,11 @@ const Board = () => {
             count={count5}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container5();
               Functions.textMoveContainer5();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
           <Container
@@ -2245,10 +2351,11 @@ const Board = () => {
             count={count6}
             containerFunction={() => {
               onCleanSpecialText();
+              onCleanSpecialTextWennPlayEnd();
               container6();
               Functions.textMoveContainer6();
-              containersPlayer2End();
-              containersPlayer1End();
+              // containersPlayer2End();
+              // containersPlayer1End();
             }}
           />
         </div>
