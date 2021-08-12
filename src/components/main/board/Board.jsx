@@ -21,6 +21,20 @@ const Board = () => {
   let [countPointPlayer2, setCountPoint2] = useState(0);
   const [disablePlayer1, setDisablePlayer1] = React.useState(false);
   const [disablePlayer2, setDisablePlayer2] = React.useState(true);
+  const containers = [
+    count1,
+    count2,
+    count3,
+    count4,
+    count5,
+    count6,
+    count7,
+    count8,
+    count9,
+    count10,
+    count11,
+    count12,
+  ];
   const containersOfPlayer1 = [count1, count2, count3, count4, count5, count6];
   const containersOfPlayer2 = [
     count7,
@@ -472,6 +486,7 @@ const Board = () => {
       setCount7(0);
       disablePlayer1EnablePlayer2();
     }
+
     setCount2(0);
   }
   function container3() {
@@ -635,6 +650,7 @@ const Board = () => {
       setCount7(0);
       disablePlayer1EnablePlayer2();
     }
+
     setCount3(0);
   }
   function container4() {
@@ -788,6 +804,7 @@ const Board = () => {
       setCount7(0);
       disablePlayer1EnablePlayer2();
     }
+
     setCount4(0);
   }
   function container5() {
@@ -932,6 +949,7 @@ const Board = () => {
       setCount7(0);
       disablePlayer1EnablePlayer2();
     }
+
     setCount5(0);
   }
   function container6() {
@@ -1097,6 +1115,7 @@ const Board = () => {
       setCount7(0);
       disablePlayer1EnablePlayer2();
     }
+
     setCount6(0);
   }
   function container7() {
@@ -1281,6 +1300,7 @@ const Board = () => {
       setCount1(0);
       disablePlayer2EnablePlayer1();
     }
+
     setCount7(0);
   }
   function container8() {
@@ -1455,6 +1475,7 @@ const Board = () => {
       setCount1(0);
       disablePlayer2EnablePlayer1();
     }
+
     setCount8(0);
   }
   function container9() {
@@ -1619,6 +1640,7 @@ const Board = () => {
       setCount1(0);
       disablePlayer2EnablePlayer1();
     }
+
     setCount9(0);
   }
   function container10() {
@@ -1773,6 +1795,7 @@ const Board = () => {
       setCount1(0);
       disablePlayer2EnablePlayer1();
     }
+
     setCount10(0);
   }
   function container11() {
@@ -1917,6 +1940,7 @@ const Board = () => {
       setCount1(0);
       disablePlayer2EnablePlayer1();
     }
+
     setCount11(0);
   }
   function container12() {
@@ -2081,20 +2105,17 @@ const Board = () => {
       setCount1(0);
       disablePlayer2EnablePlayer1();
     }
+
     setCount12(0);
   }
-
-  function allContainersEmpty(containers) {
+  const gameFinish = () => {
     if (sumContainersOfPlayer1 === 0 || sumContainersOfPlayer2 === 0) {
-      return containers.filter((m) => m !== 0).map((x) => (x = 0));
+      containers.filter((m) => m !== 0).map((x) => (x = 0));
+      getWinner();
+      document.getElementById('roundOftext').innerHTML = 'GAME OVER ';
+      document.getElementById('text').innerHTML = '';
     }
-  }
-
-  if (sumContainersOfPlayer1 === 0 || sumContainersOfPlayer2 === 0) {
-    getWinner();
-    document.getElementById('roundOftext').innerHTML = 'GAME OVER ';
-    document.getElementById('text').innerHTML = '';
-  }
+  };
 
   return (
     <div className='board'>
@@ -2110,20 +2131,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container12();
               textsFunctions.textMoveContainer12();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2134,20 +2142,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container11();
               textsFunctions.textMoveContainer11();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2158,20 +2153,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container10();
               textsFunctions.textMoveContainer10();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2182,20 +2164,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container9();
               textsFunctions.textMoveContainer9();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2206,20 +2175,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container8();
               textsFunctions.textMoveContainer8();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2230,20 +2186,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container7();
               textsFunctions.textMoveContainer7();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
         </div>
@@ -2256,20 +2199,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container1();
               textsFunctions.textMoveContainer1();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2280,20 +2210,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container2();
               textsFunctions.textMoveContainer2();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2304,20 +2221,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container3();
               textsFunctions.textMoveContainer3();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2328,20 +2232,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container4();
               textsFunctions.textMoveContainer4();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2352,20 +2243,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container5();
               textsFunctions.textMoveContainer5();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
           <Container
@@ -2376,20 +2254,7 @@ const Board = () => {
               onCleanSpecialTextWennPlayEnd();
               container6();
               textsFunctions.textMoveContainer6();
-              allContainersEmpty([
-                count1,
-                count2,
-                count3,
-                count4,
-                count5,
-                count6,
-                count7,
-                count8,
-                count9,
-                count10,
-                count11,
-                count12,
-              ]);
+              gameFinish();
             }}
           />
         </div>
