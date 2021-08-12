@@ -52,7 +52,7 @@ const Board = () => {
   let sumContainersOfPlayer2 = containersOfPlayer2.reduce(
     (prev, curr) => prev + curr
   );
-
+  console.log(sumContainersOfPlayer1);
   function getWinner() {
     if (countPointPlayer2 > countPointPlayer1) {
       textsFunctions.winnerPlayer2Text(

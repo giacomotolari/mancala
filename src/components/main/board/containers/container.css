@@ -28,11 +28,12 @@ span {
   background-image: url('./pebble3.png');
   background-image: url('./pebble5.png'); */
   background-image: url('../../../../assets/pebble6.png');
-  /* -webkit-box-shadow: 9px 20px 21px -2px rgba(0,0,0,0.83); 
-  box-shadow: 9px 20px 21px -2px rgba(0,0,0,0.83); */
+  -webkit-box-shadow: 9px 20px 21px -2px rgba(0,0,0,0.83); 
+  box-shadow: 9px 20px 21px -2px rgba(0,0,0,0.83); 
   background-size: cover;
   border-radius: 50%;
-  width: 1.8vw;
-  height: 3vh;
+  width: 1.6vw;
+  height: 2.8vh;
   margin: 0.1vw;
+  
 }
