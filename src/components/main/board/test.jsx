@@ -21,20 +21,20 @@ const Board = () => {
   const [countPointPlayer2, setCountPoint2] = useState(0);
   const [disablePlayer1, setDisablePlayer1] = React.useState(false);
   const [disablePlayer2, setDisablePlayer2] = React.useState(true);
-  // const containers = [
-  //   count1,
-  //   count2,
-  //   count3,
-  //   count4,
-  //   count5,
-  //   count6,
-  //   count7,
-  //   count8,
-  //   count9,
-  //   count10,
-  //   count11,
-  //   count12,
-  // ];
+  const containers = [
+    count1,
+    count2,
+    count3,
+    count4,
+    count5,
+    count6,
+    count7,
+    count8,
+    count9,
+    count10,
+    count11,
+    count12,
+  ];
   const containersOfPlayer1 = [count1, count2, count3, count4, count5, count6];
   const containersOfPlayer2 = [
     count7,
@@ -44,11 +44,9 @@ const Board = () => {
     count11,
     count12,
   ];
-
   let sumContainersOfPlayer1 = containersOfPlayer1.reduce(
     (prev, curr) => prev + curr
   );
-
   let sumContainersOfPlayer2 = containersOfPlayer2.reduce(
     (prev, curr) => prev + curr
   );
@@ -2118,21 +2116,12 @@ const Board = () => {
     document.getElementById('calculater').style.display = 'block';
   }
   const gameFinish = () => {
-    setCountPoint1(countPointPlayer1 + sumContainersOfPlayer1);
-    setCountPoint2(countPointPlayer2 + sumContainersOfPlayer2);
+    // containers.filter((m) => m !== 0).map((x) => (x = 0));
+    setCountPoint2((prevCount) => prevCount + sumContainersOfPlayer2);
+    setCountPoint1((prevCount) => prevCount + sumContainersOfPlayer1);
+    containers.map((x) => (x = 0));
+
     getWinner();
-    setCount1(0);
-    setCount2(0);
-    setCount3(0);
-    setCount4(0);
-    setCount5(0);
-    setCount6(0);
-    setCount7(0);
-    setCount8(0);
-    setCount9(0);
-    setCount10(0);
-    setCount11(0);
-    setCount12(0);
   };
   return (
     <div className='board'>
