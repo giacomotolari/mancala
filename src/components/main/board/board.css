@@ -1,17 +1,26 @@
+.boardWrapper {
+  width: 100vw;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .board {
   overflow: hidden;
   /* background-color: burlywood; */
   background-image: url('../../../assets/27wTQC.png');
   /* border: 1px solid brown; */
   border-radius: 5%;
-  width: 98%;
-  height: 80%;
+  width: 92%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 10%;
-  margin-left: 1%;
+  margin-bottom: 12%;
+  margin-left: -5%;
   position: relative;
 
   /* top: 5%; */
@@ -63,7 +72,6 @@
 }
 .player1Containers,
 .player2Containers {
-  /* border: 1px solid white; */
   max-width: 100%;
   height: 100%;
   display: flex;
@@ -73,11 +81,9 @@
 }
 .player2Containers {
   margin-bottom: 2%;
-  /* align-items: baseline; */
 }
 .player1Containers {
   margin-top: 2%;
-  /* align-items: flex-end; */
 }
 .pointsPlayer1,
 .pointsPlayer2 {
@@ -91,10 +97,15 @@
 }
 #calculater {
   display: none;
-  position: absolute;
+  position: relative;
+  top: -5%;
   height: 10%;
   background-color: red;
   border: 2px solid white;
   color: white;
   font-weight: bold;
+  cursor: grabbing;
+}
+small {
+  font-size: 0.5em;
 }

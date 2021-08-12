@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import * as textsFunctions from './textsFunctions.jsx';
 import Container from './containers/Container';
 import PointsContainer from './containers/PointsContainer';
+import audio1 from './sound1.mp3';
+// import audio2 from './sound2.mp3';
+// import audio3 from './sound3.mp3';
 import './board.css';
 
 const Board = () => {
@@ -21,6 +24,7 @@ const Board = () => {
   const [countPointPlayer2, setCountPoint2] = useState(0);
   const [disablePlayer1, setDisablePlayer1] = React.useState(false);
   const [disablePlayer2, setDisablePlayer2] = React.useState(true);
+
   // const containers = [
   //   count1,
   //   count2,
@@ -317,7 +321,8 @@ const Board = () => {
 
     setCount1(0);
   }
-  function container2() {
+
+  const container2 = () => {
     if (count2 === 1) {
       setCount3((prevCount) => prevCount + 1);
       disablePlayer1EnablePlayer2();
@@ -490,7 +495,7 @@ const Board = () => {
     }
 
     setCount2(0);
-  }
+  };
   function container3() {
     if (count3 === 1) {
       setCount4((prevCount) => prevCount + 1);
@@ -2134,142 +2139,162 @@ const Board = () => {
     setCount11(0);
     setCount12(0);
   };
+
+  const start1 = () => {
+    new Audio(audio1).play();
+  };
   return (
-    <div className='board'>
+    <div className='boardWrapper'>
       <button id='calculater' onClick={gameFinish}>
         CHECK THE WINNER
       </button>
-      <p className='pointsPlayer2'>{countPointPlayer2}</p>
-      <PointsContainer count={countPointPlayer2} />
-      <div className='containers'>
-        <div className='player2Containers'>
-          <Container
-            disable={disablePlayer2}
-            count={count12}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container12();
-              textsFunctions.textMoveContainer12();
-            }}
-          />
-          <Container
-            disable={disablePlayer2}
-            count={count11}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container11();
-              textsFunctions.textMoveContainer11();
-            }}
-          />
-          <Container
-            disable={disablePlayer2}
-            count={count10}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container10();
-              textsFunctions.textMoveContainer10();
-            }}
-          />
-          <Container
-            disable={disablePlayer2}
-            count={count9}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container9();
-              textsFunctions.textMoveContainer9();
-            }}
-          />
-          <Container
-            disable={disablePlayer2}
-            count={count8}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container8();
-              textsFunctions.textMoveContainer8();
-            }}
-          />
-          <Container
-            disable={disablePlayer2}
-            count={count7}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container7();
-              textsFunctions.textMoveContainer7();
-            }}
-          />
-        </div>
-        <div className='player1Containers'>
-          <Container
-            disable={disablePlayer1}
-            count={count1}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container1();
-              textsFunctions.textMoveContainer1();
-            }}
-          />
-          <Container
-            disable={disablePlayer1}
-            count={count2}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container2();
-              textsFunctions.textMoveContainer2();
-            }}
-          />
-          <Container
-            disable={disablePlayer1}
-            count={count3}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container3();
-              textsFunctions.textMoveContainer3();
-            }}
-          />
-          <Container
-            disable={disablePlayer1}
-            count={count4}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container4();
-              textsFunctions.textMoveContainer4();
-            }}
-          />
-          <Container
-            disable={disablePlayer1}
-            count={count5}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container5();
-              textsFunctions.textMoveContainer5();
-            }}
-          />
-          <Container
-            disable={disablePlayer1}
-            count={count6}
-            containerFunction={() => {
-              onCleanSpecialText();
-              onCleanSpecialTextWennPlayEnd();
-              container6();
-              textsFunctions.textMoveContainer6();
-            }}
-          />
-        </div>
-      </div>
+      <div className='board'>
+        <p className='pointsPlayer2'>{countPointPlayer2}</p>
+        <PointsContainer count={countPointPlayer2} />
+        <div className='containers'>
+          <div className='player2Containers'>
+            <Container
+              disable={disablePlayer2}
+              count={count12}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container12();
+                textsFunctions.textMoveContainer12();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer2}
+              count={count11}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container11();
+                textsFunctions.textMoveContainer11();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer2}
+              count={count10}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container10();
+                textsFunctions.textMoveContainer10();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer2}
+              count={count9}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container9();
+                textsFunctions.textMoveContainer9();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer2}
+              count={count8}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container8();
+                textsFunctions.textMoveContainer8();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer2}
+              count={count7}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container7();
+                textsFunctions.textMoveContainer7();
+                start1();
+              }}
+            />
+          </div>
 
-      <PointsContainer count={countPointPlayer1} />
-      <p className='pointsPlayer1'>{countPointPlayer1}</p>
+          <div className='player1Containers'>
+            <Container
+              disable={disablePlayer1}
+              count={count1}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container1();
+                textsFunctions.textMoveContainer1();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer1}
+              count={count2}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container2();
+                textsFunctions.textMoveContainer2();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer1}
+              count={count3}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container3();
+                textsFunctions.textMoveContainer3();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer1}
+              count={count4}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container4();
+                textsFunctions.textMoveContainer4();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer1}
+              count={count5}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container5();
+                textsFunctions.textMoveContainer5();
+                start1();
+              }}
+            />
+            <Container
+              disable={disablePlayer1}
+              count={count6}
+              containerFunction={() => {
+                onCleanSpecialText();
+                onCleanSpecialTextWennPlayEnd();
+                container6();
+                textsFunctions.textMoveContainer6();
+                start1();
+              }}
+            />
+          </div>
+          <small>player 1</small>
+        </div>
+
+        <PointsContainer count={countPointPlayer1} />
+        <p className='pointsPlayer1'>{countPointPlayer1}</p>
+      </div>
     </div>
   );
 };
