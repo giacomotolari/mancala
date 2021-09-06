@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as textsFunctions from './textsFunctions.jsx';
 import Container from './containers/Container';
 import PointsContainer from './containers/PointsContainer';
-import audio1 from './sound1.mp3';
+import audio1 from './pebbleSound.mp3';
 // import audio2 from './sound2.mp3';
 // import audio3 from './sound3.mp3';
 import './board.css';
@@ -2139,10 +2139,24 @@ const Board = () => {
     setCount11(0);
     setCount12(0);
   };
+  // const start = (howManyTimes) => {
+  //   for (let i = 0; i < howManyTimes; i++) {
+  //     new Audio(audio1).play();
+  //   }
+  //   setTimeout(() => {
+  //     start(howManyTimes);
+  //   }, 1000);
+  // };
 
-  const start1 = () => {
-    new Audio(audio1).play();
+  const start = (howManyTimes) => {
+    for (let i = 0; i < howManyTimes; i++) {
+      new Audio(audio1).play();
+    }
+    setTimeout(() => {
+      start(howManyTimes);
+    }, 1000);
   };
+
   return (
     <div className='boardWrapper'>
       <button id='calculater' onClick={gameFinish}>
@@ -2161,7 +2175,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container12();
                 textsFunctions.textMoveContainer12();
-                start1();
+                start(count12);
               }}
             />
             <Container
@@ -2172,7 +2186,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container11();
                 textsFunctions.textMoveContainer11();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2183,7 +2197,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container10();
                 textsFunctions.textMoveContainer10();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2194,7 +2208,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container9();
                 textsFunctions.textMoveContainer9();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2205,7 +2219,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container8();
                 textsFunctions.textMoveContainer8();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2216,7 +2230,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container7();
                 textsFunctions.textMoveContainer7();
-                start1();
+                start();
               }}
             />
           </div>
@@ -2230,7 +2244,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container1();
                 textsFunctions.textMoveContainer1();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2241,7 +2255,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container2();
                 textsFunctions.textMoveContainer2();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2252,7 +2266,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container3();
                 textsFunctions.textMoveContainer3();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2263,7 +2277,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container4();
                 textsFunctions.textMoveContainer4();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2274,7 +2288,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container5();
                 textsFunctions.textMoveContainer5();
-                start1();
+                start();
               }}
             />
             <Container
@@ -2285,7 +2299,7 @@ const Board = () => {
                 onCleanSpecialTextWennPlayEnd();
                 container6();
                 textsFunctions.textMoveContainer6();
-                start1();
+                start();
               }}
             />
           </div>
