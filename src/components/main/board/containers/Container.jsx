@@ -1,9 +1,6 @@
 import './container.css';
 
 const Container = (props) => {
-  // console.log(
-
-  //     [1,2,3,4,5].filter((m) => m !== 0).map((x) => (x = 0)));
 
   return (
     <button

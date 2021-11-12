@@ -8,6 +8,7 @@ import audio1 from './pebbleSound.mp3';
 import './board.css';
 
 const Board = () => {
+  const [containers, setContainers] = useState(new Array(12).fill(4));
   const [count1, setCount1] = useState(4);
   const [count2, setCount2] = useState(4);
   const [count3, setCount3] = useState(4);
@@ -25,20 +26,6 @@ const Board = () => {
   const [disablePlayer1, setDisablePlayer1] = React.useState(false);
   const [disablePlayer2, setDisablePlayer2] = React.useState(true);
 
-  // const containers = [
-  //   count1,
-  //   count2,
-  //   count3,
-  //   count4,
-  //   count5,
-  //   count6,
-  //   count7,
-  //   count8,
-  //   count9,
-  //   count10,
-  //   count11,
-  //   count12,
-  // ];
   const containersOfPlayer1 = [count1, count2, count3, count4, count5, count6];
   const containersOfPlayer2 = [
     count7,
@@ -56,7 +43,7 @@ const Board = () => {
   let sumContainersOfPlayer2 = containersOfPlayer2.reduce(
     (prev, curr) => prev + curr
   );
-  console.log(sumContainersOfPlayer1);
+
   function getWinner() {
     if (countPointPlayer2 > countPointPlayer1) {
       textsFunctions.winnerPlayer2Text(
@@ -137,6 +124,13 @@ const Board = () => {
     }
   }
 
+  const moveStones = (index) => {
+    let pebbles = containers[index];
+    if (pebbles + index === 7 || pebbles + index === 13) {
+      textsFunctions.oneRoundMore();
+    }
+  };
+
   function container1() {
     if (count1 === 1) {
       setCount2((prevCount) => prevCount + 1);
@@ -173,6 +167,7 @@ const Board = () => {
       setCount3((prevCount) => prevCount + 1);
       setCount4((prevCount) => prevCount + 1);
       setCount5((prevCount) => prevCount + 1);
+      disablePlayer1EnablePlayer2();
       setCount6((prevCount) => prevCount + 1);
       setCountPoint1((prevCount) => prevCount + 1);
       textsFunctions.oneRoundMore();
@@ -2139,21 +2134,12 @@ const Board = () => {
     setCount11(0);
     setCount12(0);
   };
-  // const start = (howManyTimes) => {
-  //   for (let i = 0; i < howManyTimes; i++) {
-  //     new Audio(audio1).play();
-  //   }
-  //   setTimeout(() => {
-  //     start(howManyTimes);
-  //   }, 1000);
-  // };
 
-  const start = (howManyTimes) => {
-    for (let i = 0; i < howManyTimes; i++) {
-      new Audio(audio1).play();
-    }
-    setTimeout(() => {
-      start(howManyTimes);
+  const start = (pebble) => {
+    let i = 0;
+    const timer = setInterval(() => {
+      i < pebble ? new Audio(audio1).play() : clearInterval(timer);
+      i++;
     }, 1000);
   };
 
@@ -2167,7 +2153,20 @@ const Board = () => {
         <PointsContainer count={countPointPlayer2} />
         <div className='containers'>
           <div className='player2Containers'>
-            <Container
+            {containers.slice(0, 6).map((pebble,index) => (
+              <Container
+                count={pebble}
+                containerFunction={() => {
+                  onCleanSpecialText();
+                  onCleanSpecialTextWennPlayEnd();
+                  moveStones(index);
+                  // container12();
+                  // textsFunctions.textMoveContainer12();
+                  start(pebble);
+                }}
+              />
+            ))}
+            {/* <Container
               disable={disablePlayer2}
               count={count12}
               containerFunction={() => {
@@ -2232,7 +2231,7 @@ const Board = () => {
                 textsFunctions.textMoveContainer7();
                 start();
               }}
-            />
+            /> */}
           </div>
 
           <div className='player1Containers'>
@@ -2303,7 +2302,7 @@ const Board = () => {
               }}
             />
           </div>
-          <small>player 1</small>
+          {/* <small>player 1</small> */}
         </div>
 
         <PointsContainer count={countPointPlayer1} />
